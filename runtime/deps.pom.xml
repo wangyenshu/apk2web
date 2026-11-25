@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <!-- the jars the framework compiles against and the linker reads (apk2web.py resolves them with Maven) -->
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>apk2web</groupId><artifactId>deps</artifactId><version>1</version>
+  <dependencies>
+    <dependency><groupId>org.teavm</groupId><artifactId>teavm-classlib</artifactId><version>0.16.0</version></dependency>
+    <dependency><groupId>org.teavm</groupId><artifactId>teavm-jso-apis</artifactId><version>0.16.0</version></dependency>
+    <dependency><groupId>org.teavm</groupId><artifactId>teavm-core</artifactId><version>0.16.0</version></dependency>
+    <!-- platform libraries Android ships (org.json, org.xmlpull + kXML) -->
+    <dependency><groupId>com.vaadin.external.google</groupId><artifactId>android-json</artifactId><version>0.0.20131108.vaadin1</version></dependency>
+    <dependency><groupId>net.sf.kxml</groupId><artifactId>kxml2</artifactId><version>2.3.0</version></dependency>
+    <!-- class shapes of older platforms (classes removed since): linker templates only. The Apache HTTP client
+         Android bundled is used as a library (commons-logging and codec are the framework's or unused) -->
+    <dependency><groupId>com.google.android</groupId><artifactId>android</artifactId><version>4.1.1.4</version>
+      <exclusions><exclusion><groupId>*</groupId><artifactId>*</artifactId></exclusion></exclusions></dependency>
+    <dependency><groupId>org.apache.httpcomponents</groupId><artifactId>httpclient</artifactId><version>4.0.1</version>
+      <exclusions><exclusion><groupId>*</groupId><artifactId>*</artifactId></exclusion></exclusions></dependency>
+    <dependency><groupId>org.apache.httpcomponents</groupId><artifactId>httpcore</artifactId><version>4.0.1</version></dependency>
+    <dependency><groupId>de.femtopedia.dex2jar</groupId><artifactId>dex-tools</artifactId><version>2.4.34</version></dependency>
+  </dependencies>
+</project>

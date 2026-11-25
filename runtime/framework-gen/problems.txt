@@ -1,0 +1,42 @@
+skipped android/test/suitebuilder/TestSuiteBuilder: refers to com/android/internal/util/Predicate
+skipped android/test/suitebuilder/UnitTestSuiteBuilder: refers to android/test/suitebuilder/TestSuiteBuilder
+skipped java/lang/invoke/ConstantCallSite: no constructor of java/lang/invoke/CallSite it can call
+skipped java/lang/invoke/MutableCallSite: no constructor of java/lang/invoke/CallSite it can call
+skipped java/lang/invoke/VolatileCallSite: no constructor of java/lang/invoke/CallSite it can call
+skipped java/lang/ref/PhantomReference: no constructor of java/lang/ref/Reference it can call
+skipped java/nio/MappedByteBuffer: no constructor of java/nio/ByteBuffer it can call
+skipped java/nio/channels/FileChannel: refers to java/nio/MappedByteBuffer
+skipped java/nio/channels/FileLock: refers to java/nio/channels/FileChannel
+skipped java/util/IllegalFormatWidthException: no constructor of java/util/IllegalFormatException it can call
+skipped java/util/MissingFormatArgumentException: no constructor of java/util/IllegalFormatException it can call
+skipped java/util/UnknownFormatFlagsException: no constructor of java/util/IllegalFormatException it can call
+skipped javax/crypto/NullCipher: no constructor of javax/crypto/Cipher it can call
+skipped android/content/res/AssetFileDescriptor$AutoCloseInputStream: refers to java/nio/channels/FileChannel
+skipped java/nio/channels/AsynchronousFileChannel: refers to java/nio/channels/FileLock
+android/adservices/AdServicesVersion.API_VERSION: no declaration
+android/companion/AssociationRequest$Builder.checkNotUsed()V: no declaration (instance method assumed)
+android/companion/AssociationRequest$Builder.markUsed()V: no declaration (instance method assumed)
+android/companion/BluetoothDeviceFilter$Builder.checkNotUsed()V: no declaration (instance method assumed)
+android/companion/BluetoothDeviceFilter$Builder.markUsed()V: no declaration (instance method assumed)
+android/companion/BluetoothLeDeviceFilter$Builder.checkNotUsed()V: no declaration (instance method assumed)
+android/companion/BluetoothLeDeviceFilter$Builder.markUsed()V: no declaration (instance method assumed)
+android/companion/WifiDeviceFilter$Builder.checkNotUsed()V: no declaration (instance method assumed)
+android/companion/WifiDeviceFilter$Builder.markUsed()V: no declaration (instance method assumed)
+android/icu/text/DateFormat$BooleanAttribute.PARSE_PARTIAL_MATCH: no declaration
+android/icu/text/RelativeDateTimeFormatter$RelativeUnit.QUARTERS: no declaration
+android/icu/util/JapaneseCalendar.CURRENT_ERA: no declaration
+android/net/PskKeyManager.MAX_IDENTITY_HINT_LENGTH_BYTES: no declaration
+android/net/PskKeyManager.MAX_IDENTITY_LENGTH_BYTES: no declaration
+android/net/PskKeyManager.MAX_KEY_LENGTH_BYTES: no declaration
+android/net/PskKeyManager.chooseClientKeyIdentity(Ljava/lang/String;Ljava/net/Socket;)Ljava/lang/String;: no declaration (instance method assumed)
+android/net/PskKeyManager.chooseClientKeyIdentity(Ljava/lang/String;Ljavax/net/ssl/SSLEngine;)Ljava/lang/String;: no declaration (instance method assumed)
+android/net/PskKeyManager.chooseServerKeyIdentityHint(Ljava/net/Socket;)Ljava/lang/String;: no declaration (instance method assumed)
+android/net/PskKeyManager.chooseServerKeyIdentityHint(Ljavax/net/ssl/SSLEngine;)Ljava/lang/String;: no declaration (instance method assumed)
+android/net/PskKeyManager.getKey(Ljava/lang/String;Ljava/lang/String;Ljava/net/Socket;)Ljavax/crypto/SecretKey;: no declaration (instance method assumed)
+android/net/PskKeyManager.getKey(Ljava/lang/String;Ljava/lang/String;Ljavax/net/ssl/SSLEngine;)Ljavax/crypto/SecretKey;: no declaration (instance method assumed)
+android/service/voice/VoiceInteractionService.startSession(Landroid/os/Bundle;)V: no declaration (instance method assumed)
+android/service/voice/VoiceInteractionSession.onCreate(Landroid/os/Bundle;)V: no declaration (instance method assumed)
+android/test/mock/MockPackageManager.getDefaultBrowserPackageName(I)Ljava/lang/String;: no declaration (instance method assumed)
+android/test/mock/MockPackageManager.setDefaultBrowserPackageName(Ljava/lang/String;I)Z: no declaration (instance method assumed)
+android/test/mock/MockPackageManager.setPackageObbPath(Ljava/lang/String;Ljava/lang/String;)V: no declaration (instance method assumed)
+android/webkit/JsResult.mProxy: type

@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The platform's themes, with the attributes apps and libraries (AppCompat) read from them. Values follow
+     frameworks/base/core/res/res/values/themes*.xml and colors*.xml; the platform's private colors are written out. -->
+<resources>
+    <!-- Theme: the original (dark) theme, the default for apps that target API levels before 11 -->
+    <style name="Theme">
+        <item name="android:isLightTheme">false</item>
+        <item name="android:colorForeground">#ffffffff</item>
+        <item name="android:colorForegroundInverse">#ff000000</item>
+        <item name="android:colorBackground">@android:color/background_dark</item>
+        <item name="android:colorBackgroundCacheHint">?android:attr/colorBackground</item>
+        <item name="android:disabledAlpha">0.5</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:textColorPrimary">@android:color/primary_text_dark</item>
+        <item name="android:textColorSecondary">@android:color/secondary_text_dark</item>
+        <item name="android:textColorTertiary">@android:color/tertiary_text_dark</item>
+        <item name="android:textColorPrimaryInverse">@android:color/primary_text_light</item>
+        <item name="android:textColorSecondaryInverse">@android:color/secondary_text_light</item>
+        <item name="android:textColorTertiaryInverse">@android:color/tertiary_text_light</item>
+        <item name="android:textColorPrimaryDisableOnly">#ffffffff</item>
+        <item name="android:textColorPrimaryNoDisable">@android:color/primary_text_dark_nodisable</item>
+        <item name="android:textColorSecondaryNoDisable">@android:color/secondary_text_dark_nodisable</item>
+        <item name="android:textColorHint">@android:color/hint_foreground_dark</item>
+        <item name="android:textColorHintInverse">@android:color/hint_foreground_light</item>
+        <item name="android:textColorHighlight">#ffffa200</item>
+        <item name="android:textColorHighlightInverse">#ffffa200</item>
+        <item name="android:textColorLink">#ff5c5cff</item>
+        <item name="android:textColorLinkInverse">#ff0000ee</item>
+        <item name="android:textColorAlertDialogListItem">#ffffffff</item>
+        <item name="android:textAppearance">@android:style/TextAppearance</item>
+        <item name="android:textAppearanceInverse">@android:style/TextAppearance.Inverse</item>
+        <item name="android:textAppearanceLarge">@android:style/TextAppearance.Large</item>
+        <item name="android:textAppearanceMedium">@android:style/TextAppearance.Medium</item>
+        <item name="android:textAppearanceSmall">@android:style/TextAppearance.Small</item>
+        <item name="android:textAppearanceLargeInverse">@android:style/TextAppearance.Large.Inverse</item>
+        <item name="android:textAppearanceMediumInverse">@android:style/TextAppearance.Medium.Inverse</item>
+        <item name="android:textAppearanceSmallInverse">@android:style/TextAppearance.Small.Inverse</item>
+        <item name="android:windowBackground">?android:attr/colorBackground</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowActionBarOverlay">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:listPreferredItemHeight">64dip</item>
+        <item name="android:listPreferredItemHeightSmall">48dip</item>
+        <item name="android:listPreferredItemHeightLarge">80dip</item>
+        <item name="android:listPreferredItemPaddingLeft">6dip</item>
+        <item name="android:listPreferredItemPaddingRight">6dip</item>
+        <item name="android:listPreferredItemPaddingStart">6dip</item>
+        <item name="android:listPreferredItemPaddingEnd">6dip</item>
+        <item name="android:actionBarSize">48dip</item>
+        <item name="android:dividerHorizontal">@null</item>
+        <item name="android:selectableItemBackground">@null</item>
+        <item name="android:selectableItemBackgroundBorderless">?android:attr/selectableItemBackground</item>
+        <item name="android:scrollbarSize">10dip</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustUnspecified</item>
+        <item name="android:colorPrimary">@android:color/primary_material_dark</item>
+        <item name="android:colorPrimaryDark">@android:color/primary_dark_material_dark</item>
+        <item name="android:colorAccent">@android:color/accent_material_dark</item>
+        <item name="android:colorControlNormal">?android:attr/textColorSecondary</item>
+        <item name="android:colorControlActivated">?android:attr/colorAccent</item>
+        <item name="android:colorControlHighlight">@android:color/ripple_material_dark</item>
+        <item name="android:colorButtonNormal">@android:color/button_material_dark</item>
+        <item name="android:colorEdgeEffect">?android:attr/colorPrimary</item>
+        <item name="android:colorError">#ffff7043</item>
+        <item name="android:statusBarColor">#ff000000</item>
+        <item name="android:navigationBarColor">#ff000000</item>
+        <!-- the choice indicators of CheckedTextView list items (simple_list_item_*_choice) -->
+        <item name="android:listChoiceIndicatorSingle">@android:drawable/btn_radio</item>
+        <item name="android:listChoiceIndicatorMultiple">@android:drawable/btn_check</item>
+        <item name="android:activatedBackgroundIndicator">@android:drawable/activated_background</item>
+    </style>
+    <style name="Theme.NoTitleBar" parent="@android:style/Theme">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.NoTitleBar.Fullscreen" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="Theme.Black" parent="@android:style/Theme">
+        <item name="android:windowBackground">#ff000000</item>
+        <item name="android:colorBackground">#ff000000</item>
+    </style>
+    <style name="Theme.Black.NoTitleBar" parent="@android:style/Theme.Black">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Black.NoTitleBar.Fullscreen" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="Theme.Light" parent="@android:style/Theme">
+        <item name="android:isLightTheme">true</item>
+        <item name="android:colorForeground">#ff000000</item>
+        <item name="android:colorForegroundInverse">#ffffffff</item>
+        <item name="android:colorBackground">@android:color/background_light</item>
+        <item name="android:textColorPrimary">@android:color/primary_text_light</item>
+        <item name="android:textColorSecondary">@android:color/secondary_text_light</item>
+        <item name="android:textColorTertiary">@android:color/tertiary_text_light</item>
+        <item name="android:textColorPrimaryInverse">@android:color/primary_text_dark</item>
+        <item name="android:textColorSecondaryInverse">@android:color/secondary_text_dark</item>
+        <item name="android:textColorTertiaryInverse">@android:color/tertiary_text_dark</item>
+        <item name="android:textColorPrimaryDisableOnly">#ff000000</item>
+        <item name="android:textColorPrimaryNoDisable">@android:color/primary_text_light_nodisable</item>
+        <item name="android:textColorSecondaryNoDisable">@android:color/secondary_text_light_nodisable</item>
+        <item name="android:textColorHint">@android:color/hint_foreground_light</item>
+        <item name="android:textColorHintInverse">@android:color/hint_foreground_dark</item>
+        <item name="android:textColorLink">#ff0000ee</item>
+        <item name="android:textColorLinkInverse">#ff5c5cff</item>
+        <item name="android:textColorAlertDialogListItem">#ff000000</item>
+        <item name="android:colorControlHighlight">@android:color/ripple_material_light</item>
+        <item name="android:colorButtonNormal">@android:color/button_material_light</item>
+        <item name="android:colorPrimary">@android:color/primary_material_light</item>
+        <item name="android:colorPrimaryDark">@android:color/primary_dark_material_light</item>
+        <item name="android:colorAccent">@android:color/accent_material_light</item>
+        <item name="android:colorError">#ffd32f2f</item>
+    </style>
+    <style name="Theme.Light.NoTitleBar" parent="@android:style/Theme.Light">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Light.NoTitleBar.Fullscreen" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="Theme.Translucent" parent="@android:style/Theme">
+        <item name="android:windowBackground">#00000000</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="Theme.Translucent.NoTitleBar" parent="@android:style/Theme.Translucent">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Translucent.NoTitleBar.Fullscreen" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="Theme.NoDisplay" parent="@android:style/Theme">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Dialog" parent="@android:style/Theme">
+        <item name="android:windowBackground">@android:drawable/panel_background</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+    <style name="Theme.Panel" parent="@android:style/Theme">
+        <item name="android:windowBackground">#00000000</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Light.Panel" parent="@android:style/Theme.Light">
+        <item name="android:windowBackground">#00000000</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Wallpaper" parent="@android:style/Theme">
+        <item name="android:windowBackground">#00000000</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="Theme.Wallpaper.NoTitleBar" parent="@android:style/Theme.Wallpaper">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Wallpaper.NoTitleBar.Fullscreen" parent="@android:style/Theme.Wallpaper.NoTitleBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="Theme.WithActionBar" parent="@android:style/Theme">
+        <item name="android:windowActionBar">true</item>
+    </style>
+
+    <!-- Holo (API 11) -->
+    <style name="Theme.Holo" parent="@android:style/Theme">
+        <item name="android:colorForeground">#fff3f3f3</item>
+        <item name="android:colorBackground">@android:color/background_holo_dark</item>
+        <item name="android:textColorPrimary">@android:color/primary_text_holo_dark</item>
+        <item name="android:textColorSecondary">@android:color/secondary_text_holo_dark</item>
+        <item name="android:textColorTertiary">#ff808080</item>
+        <item name="android:textColorPrimaryInverse">@android:color/primary_text_holo_light</item>
+        <item name="android:textColorSecondaryInverse">@android:color/secondary_text_holo_light</item>
+        <item name="android:textColorHint">@android:color/hint_foreground_holo_dark</item>
+        <item name="android:textColorHighlight">#6633b5e5</item>
+        <item name="android:textColorLink">#ff33b5e5</item>
+        <item name="android:windowActionBar">true</item>
+        <item name="android:listPreferredItemPaddingLeft">8dip</item>
+        <item name="android:listPreferredItemPaddingRight">8dip</item>
+        <item name="android:listPreferredItemPaddingStart">8dip</item>
+        <item name="android:listPreferredItemPaddingEnd">8dip</item>
+        <item name="android:colorPrimary">#ff212121</item>
+        <item name="android:colorAccent">#ff33b5e5</item>
+        <item name="android:colorControlActivated">#ff33b5e5</item>
+        <item name="android:textColorPrimaryDisableOnly">@android:color/primary_text_disable_only_holo_dark</item>
+    </style>
+    <style name="Theme.Holo.NoActionBar" parent="@android:style/Theme.Holo">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Holo.NoActionBar.Fullscreen" parent="@android:style/Theme.Holo.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="Theme.Holo.NoActionBar.Overscan" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+    <style name="Theme.Holo.NoActionBar.TranslucentDecor" parent="@android:style/Theme.Holo.NoActionBar" />
+    <style name="Theme.Holo.Light" parent="@android:style/Theme.Light">
+        <item name="android:colorForeground">#ff000000</item>
+        <item name="android:colorBackground">@android:color/background_holo_light</item>
+        <item name="android:textColorPrimary">@android:color/primary_text_holo_light</item>
+        <item name="android:textColorSecondary">@android:color/secondary_text_holo_light</item>
+        <item name="android:textColorTertiary">#ff808080</item>
+        <item name="android:textColorPrimaryInverse">@android:color/primary_text_holo_dark</item>
+        <item name="android:textColorSecondaryInverse">@android:color/secondary_text_holo_dark</item>
+        <item name="android:textColorHint">@android:color/hint_foreground_holo_light</item>
+        <item name="android:textColorHighlight">#6633b5e5</item>
+        <item name="android:textColorLink">#ff0099cc</item>
+        <item name="android:windowActionBar">true</item>
+        <item name="android:listPreferredItemPaddingLeft">8dip</item>
+        <item name="android:listPreferredItemPaddingRight">8dip</item>
+        <item name="android:listPreferredItemPaddingStart">8dip</item>
+        <item name="android:listPreferredItemPaddingEnd">8dip</item>
+        <item name="android:colorAccent">#ff0099cc</item>
+        <item name="android:colorControlActivated">#ff0099cc</item>
+        <item name="android:textColorPrimaryDisableOnly">@android:color/primary_text_disable_only_holo_light</item>
+    </style>
+    <style name="Theme.Holo.Light.DarkActionBar" parent="@android:style/Theme.Holo.Light" />
+    <style name="Theme.Holo.Light.NoActionBar" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Holo.Light.NoActionBar.Fullscreen" parent="@android:style/Theme.Holo.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="Theme.Holo.Light.NoActionBar.Overscan" parent="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" />
+    <style name="Theme.Holo.Light.NoActionBar.TranslucentDecor" parent="@android:style/Theme.Holo.Light.NoActionBar" />
+    <style name="Theme.Holo.Dialog" parent="@android:style/Theme.Holo">
+        <item name="android:windowBackground">@android:drawable/panel_background</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+    <style name="Theme.Holo.Dialog.MinWidth" parent="@android:style/Theme.Holo.Dialog" />
+    <style name="Theme.Holo.Dialog.NoActionBar" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Holo.Dialog.NoActionBar.MinWidth" parent="@android:style/Theme.Holo.Dialog.NoActionBar" />
+    <style name="Theme.Holo.DialogWhenLarge" parent="@android:style/Theme.Holo" />
+    <style name="Theme.Holo.DialogWhenLarge.NoActionBar" parent="@android:style/Theme.Holo.NoActionBar" />
+    <style name="Theme.Holo.Light.Dialog" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowBackground">#fff3f3f3</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+    <style name="Theme.Holo.Light.Dialog.MinWidth" parent="@android:style/Theme.Holo.Light.Dialog" />
+    <style name="Theme.Holo.Light.Dialog.NoActionBar" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Holo.Light.Dialog.NoActionBar.MinWidth" parent="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+    <style name="Theme.Holo.Light.DialogWhenLarge" parent="@android:style/Theme.Holo.Light" />
+    <style name="Theme.Holo.Light.DialogWhenLarge.NoActionBar" parent="@android:style/Theme.Holo.Light.NoActionBar" />
+    <style name="Theme.Holo.Panel" parent="@android:style/Theme.Holo">
+        <item name="android:windowBackground">#00000000</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="Theme.Holo.Light.Panel" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowBackground">#00000000</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="Theme.Holo.Wallpaper" parent="@android:style/Theme.Holo">
+        <item name="android:windowBackground">#00000000</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="Theme.Holo.Wallpaper.NoTitleBar" parent="@android:style/Theme.Holo.Wallpaper">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <!-- Material (API 21) -->
+    <style name="Theme.Material" parent="@android:style/Theme">
+        <item name="android:colorForeground">#ffffffff</item>
+        <item name="android:colorBackground">@android:color/background_material_dark</item>
+        <item name="android:textColorPrimary">@android:color/primary_text_material_dark</item>
+        <item name="android:textColorSecondary">@android:color/secondary_text_material_dark</item>
+        <item name="android:textColorTertiary">#4dffffff</item>
+        <item name="android:textColorPrimaryInverse">@android:color/primary_text_material_light</item>
+        <item name="android:textColorSecondaryInverse">@android:color/secondary_text_material_light</item>
+        <item name="android:textColorTertiaryInverse">#61000000</item>
+        <item name="android:textColorHint">@android:color/hint_foreground_material_dark</item>
+        <item name="android:textColorHintInverse">@android:color/hint_foreground_material_light</item>
+        <item name="android:textColorHighlight">#6680cbc4</item>
+        <item name="android:textColorLink">?android:attr/colorAccent</item>
+        <item name="android:disabledAlpha">0.3</item>
+        <item name="android:windowActionBar">true</item>
+        <item name="android:actionBarSize">56dip</item>
+        <item name="android:listPreferredItemPaddingLeft">16dip</item>
+        <item name="android:listPreferredItemPaddingRight">16dip</item>
+        <item name="android:listPreferredItemPaddingStart">16dip</item>
+        <item name="android:listPreferredItemPaddingEnd">16dip</item>
+        <item name="android:colorPrimary">@android:color/primary_material_dark</item>
+        <item name="android:colorPrimaryDark">@android:color/primary_dark_material_dark</item>
+        <item name="android:colorAccent">@android:color/accent_material_dark</item>
+        <item name="android:colorControlNormal">?android:attr/textColorSecondary</item>
+        <item name="android:colorControlActivated">?android:attr/colorAccent</item>
+        <item name="android:colorControlHighlight">@android:color/ripple_material_dark</item>
+        <item name="android:colorButtonNormal">@android:color/button_material_dark</item>
+        <item name="android:statusBarColor">?android:attr/colorPrimaryDark</item>
+    </style>
+    <style name="Theme.Material.NoActionBar" parent="@android:style/Theme.Material">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Material.NoActionBar.Fullscreen" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="Theme.Material.NoActionBar.Overscan" parent="@android:style/Theme.Material.NoActionBar.Fullscreen" />
+    <style name="Theme.Material.NoActionBar.TranslucentDecor" parent="@android:style/Theme.Material.NoActionBar" />
+    <style name="Theme.Material.Light" parent="@android:style/Theme.Light">
+        <item name="android:colorForeground">#ff000000</item>
+        <item name="android:colorBackground">@android:color/background_material_light</item>
+        <item name="android:textColorPrimary">@android:color/primary_text_material_light</item>
+        <item name="android:textColorSecondary">@android:color/secondary_text_material_light</item>
+        <item name="android:textColorTertiary">#61000000</item>
+        <item name="android:textColorPrimaryInverse">@android:color/primary_text_material_dark</item>
+        <item name="android:textColorSecondaryInverse">@android:color/secondary_text_material_dark</item>
+        <item name="android:textColorTertiaryInverse">#4dffffff</item>
+        <item name="android:textColorHint">@android:color/hint_foreground_material_light</item>
+        <item name="android:textColorHintInverse">@android:color/hint_foreground_material_dark</item>
+        <item name="android:textColorHighlight">#66009688</item>
+        <item name="android:textColorLink">?android:attr/colorAccent</item>
+        <item name="android:disabledAlpha">0.26</item>
+        <item name="android:windowActionBar">true</item>
+        <item name="android:actionBarSize">56dip</item>
+        <item name="android:listPreferredItemPaddingLeft">16dip</item>
+        <item name="android:listPreferredItemPaddingRight">16dip</item>
+        <item name="android:listPreferredItemPaddingStart">16dip</item>
+        <item name="android:listPreferredItemPaddingEnd">16dip</item>
+        <item name="android:colorPrimary">@android:color/primary_material_light</item>
+        <item name="android:colorPrimaryDark">@android:color/primary_dark_material_light</item>
+        <item name="android:colorAccent">@android:color/accent_material_light</item>
+        <item name="android:colorControlNormal">?android:attr/textColorSecondary</item>
+        <item name="android:colorControlActivated">?android:attr/colorAccent</item>
+        <item name="android:colorControlHighlight">@android:color/ripple_material_light</item>
+        <item name="android:colorButtonNormal">@android:color/button_material_light</item>
+        <item name="android:statusBarColor">?android:attr/colorPrimaryDark</item>
+    </style>
+    <style name="Theme.Material.Light.DarkActionBar" parent="@android:style/Theme.Material.Light" />
+    <style name="Theme.Material.Light.LightStatusBar" parent="@android:style/Theme.Material.Light" />
+    <style name="Theme.Material.Light.NoActionBar" parent="@android:style/Theme.Material.Light">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Material.Light.NoActionBar.Fullscreen" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="Theme.Material.Light.NoActionBar.Overscan" parent="@android:style/Theme.Material.Light.NoActionBar.Fullscreen" />
+    <style name="Theme.Material.Light.NoActionBar.TranslucentDecor" parent="@android:style/Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Material.Dialog" parent="@android:style/Theme.Material">
+        <item name="android:windowBackground">#ff424242</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+    <style name="Theme.Material.Dialog.Alert" parent="@android:style/Theme.Material.Dialog" />
+    <style name="Theme.Material.Dialog.MinWidth" parent="@android:style/Theme.Material.Dialog" />
+    <style name="Theme.Material.Dialog.NoActionBar" parent="@android:style/Theme.Material.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Material.Dialog.NoActionBar.MinWidth" parent="@android:style/Theme.Material.Dialog.NoActionBar" />
+    <style name="Theme.Material.Dialog.Presentation" parent="@android:style/Theme.Material.NoActionBar.Fullscreen" />
+    <style name="Theme.Material.DialogWhenLarge" parent="@android:style/Theme.Material" />
+    <style name="Theme.Material.DialogWhenLarge.NoActionBar" parent="@android:style/Theme.Material.NoActionBar" />
+    <style name="Theme.Material.Light.Dialog" parent="@android:style/Theme.Material.Light">
+        <item name="android:windowBackground">#ffffffff</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+    <style name="Theme.Material.Light.Dialog.Alert" parent="@android:style/Theme.Material.Light.Dialog" />
+    <style name="Theme.Material.Light.Dialog.MinWidth" parent="@android:style/Theme.Material.Light.Dialog" />
+    <style name="Theme.Material.Light.Dialog.NoActionBar" parent="@android:style/Theme.Material.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Material.Light.Dialog.NoActionBar.MinWidth" parent="@android:style/Theme.Material.Light.Dialog.NoActionBar" />
+    <style name="Theme.Material.Light.Dialog.Presentation" parent="@android:style/Theme.Material.Light.NoActionBar.Fullscreen" />
+    <style name="Theme.Material.Light.DialogWhenLarge" parent="@android:style/Theme.Material.Light" />
+    <style name="Theme.Material.Light.DialogWhenLarge.NoActionBar" parent="@android:style/Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Material.Light.DialogWhenLarge.DarkActionBar" parent="@android:style/Theme.Material.Light.DarkActionBar" />
+    <style name="Theme.Material.Panel" parent="@android:style/Theme.Material">
+        <item name="android:windowBackground">#00000000</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="Theme.Material.Light.Panel" parent="@android:style/Theme.Material.Light">
+        <item name="android:windowBackground">#00000000</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="Theme.Material.Wallpaper" parent="@android:style/Theme.Material">
+        <item name="android:windowBackground">#00000000</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="Theme.Material.Wallpaper.NoTitleBar" parent="@android:style/Theme.Material.Wallpaper">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="ThemeOverlay" />
+    <style name="ThemeOverlay.Material" parent="@android:style/ThemeOverlay" />
+    <style name="ThemeOverlay.Material.Light" parent="@android:style/ThemeOverlay.Material">
+        <item name="android:isLightTheme">true</item>
+        <item name="android:colorForeground">#ff000000</item>
+        <item name="android:colorBackground">@android:color/background_material_light</item>
+        <item name="android:textColorPrimary">@android:color/primary_text_material_light</item>
+        <item name="android:textColorSecondary">@android:color/secondary_text_material_light</item>
+        <item name="android:textColorTertiary">#61000000</item>
+        <item name="android:textColorHint">@android:color/hint_foreground_material_light</item>
+        <item name="android:colorControlNormal">?android:attr/textColorSecondary</item>
+        <item name="android:colorControlHighlight">@android:color/ripple_material_light</item>
+        <item name="android:colorButtonNormal">@android:color/button_material_light</item>
+    </style>
+    <style name="ThemeOverlay.Material.Dark" parent="@android:style/ThemeOverlay.Material">
+        <item name="android:isLightTheme">false</item>
+        <item name="android:colorForeground">#ffffffff</item>
+        <item name="android:colorBackground">@android:color/background_material_dark</item>
+        <item name="android:textColorPrimary">@android:color/primary_text_material_dark</item>
+        <item name="android:textColorSecondary">@android:color/secondary_text_material_dark</item>
+        <item name="android:textColorTertiary">#4dffffff</item>
+        <item name="android:textColorHint">@android:color/hint_foreground_material_dark</item>
+        <item name="android:colorControlNormal">?android:attr/textColorSecondary</item>
+        <item name="android:colorControlHighlight">@android:color/ripple_material_dark</item>
+        <item name="android:colorButtonNormal">@android:color/button_material_dark</item>
+    </style>
+    <style name="ThemeOverlay.Material.ActionBar" parent="@android:style/ThemeOverlay.Material.Light" />
+    <style name="ThemeOverlay.Material.Dark.ActionBar" parent="@android:style/ThemeOverlay.Material.Dark" />
+    <style name="ThemeOverlay.Material.Dialog" parent="@android:style/ThemeOverlay.Material">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="ThemeOverlay.Material.Dialog.Alert" parent="@android:style/ThemeOverlay.Material.Dialog" />
+
+    <!-- DeviceDefault: Holo before API 21 (values-v21 makes it Material) -->
+    <style name="Theme.DeviceDefault" parent="@android:style/Theme.Holo" />
+    <style name="Theme.DeviceDefault.NoActionBar" parent="@android:style/Theme.Holo.NoActionBar" />
+    <style name="Theme.DeviceDefault.NoActionBar.Fullscreen" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+    <style name="Theme.DeviceDefault.NoActionBar.Overscan" parent="@android:style/Theme.Holo.NoActionBar.Overscan" />
+    <style name="Theme.DeviceDefault.NoActionBar.TranslucentDecor" parent="@android:style/Theme.Holo.NoActionBar.TranslucentDecor" />
+    <style name="Theme.DeviceDefault.Light" parent="@android:style/Theme.Holo.Light" />
+    <style name="Theme.DeviceDefault.Light.DarkActionBar" parent="@android:style/Theme.Holo.Light.DarkActionBar" />
+    <style name="Theme.DeviceDefault.Light.NoActionBar" parent="@android:style/Theme.Holo.Light.NoActionBar" />
+    <style name="Theme.DeviceDefault.Light.NoActionBar.Fullscreen" parent="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" />
+    <style name="Theme.DeviceDefault.Light.NoActionBar.Overscan" parent="@android:style/Theme.Holo.Light.NoActionBar.Overscan" />
+    <style name="Theme.DeviceDefault.Light.NoActionBar.TranslucentDecor" parent="@android:style/Theme.Holo.Light.NoActionBar.TranslucentDecor" />
+    <style name="Theme.DeviceDefault.Dialog" parent="@android:style/Theme.Holo.Dialog" />
+    <style name="Theme.DeviceDefault.Dialog.MinWidth" parent="@android:style/Theme.Holo.Dialog.MinWidth" />
+    <style name="Theme.DeviceDefault.Dialog.NoActionBar" parent="@android:style/Theme.Holo.Dialog.NoActionBar" />
+    <style name="Theme.DeviceDefault.Dialog.NoActionBar.MinWidth" parent="@android:style/Theme.Holo.Dialog.NoActionBar.MinWidth" />
+    <style name="Theme.DeviceDefault.Dialog.Alert" parent="@android:style/Theme.Holo.Dialog" />
+    <style name="Theme.DeviceDefault.Light.Dialog" parent="@android:style/Theme.Holo.Light.Dialog" />
+    <style name="Theme.DeviceDefault.Light.Dialog.MinWidth" parent="@android:style/Theme.Holo.Light.Dialog.MinWidth" />
+    <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar" parent="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+    <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar.MinWidth" parent="@android:style/Theme.Holo.Light.Dialog.NoActionBar.MinWidth" />
+    <style name="Theme.DeviceDefault.Light.Dialog.Alert" parent="@android:style/Theme.Holo.Light.Dialog" />
+    <style name="Theme.DeviceDefault.DialogWhenLarge" parent="@android:style/Theme.Holo.DialogWhenLarge" />
+    <style name="Theme.DeviceDefault.DialogWhenLarge.NoActionBar" parent="@android:style/Theme.Holo.DialogWhenLarge.NoActionBar" />
+    <style name="Theme.DeviceDefault.Light.DialogWhenLarge" parent="@android:style/Theme.Holo.Light.DialogWhenLarge" />
+    <style name="Theme.DeviceDefault.Light.DialogWhenLarge.NoActionBar" parent="@android:style/Theme.Holo.Light.DialogWhenLarge.NoActionBar" />
+    <style name="Theme.DeviceDefault.Panel" parent="@android:style/Theme.Holo.Panel" />
+    <style name="Theme.DeviceDefault.Light.Panel" parent="@android:style/Theme.Holo.Light.Panel" />
+    <style name="Theme.DeviceDefault.Wallpaper" parent="@android:style/Theme.Holo.Wallpaper" />
+    <style name="Theme.DeviceDefault.Wallpaper.NoTitleBar" parent="@android:style/Theme.Holo.Wallpaper.NoTitleBar" />
+    <style name="Theme.DeviceDefault.Settings" parent="@android:style/Theme.Holo.Light.DarkActionBar" />
+    <style name="Theme.DeviceDefault.DayNight" parent="@android:style/Theme.DeviceDefault.Light" />
+</resources>

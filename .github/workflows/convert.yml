@@ -1,0 +1,75 @@
+# Converts an Android APK with apk2web and publishes the page on GitHub Pages.
+# The APK is app.apk in the repository, the URL given when running the workflow by hand, or the APK_URL repository
+# variable. Settings > Pages > Source must be "GitHub Actions".
+name: Convert APK to a web page
+
+on:
+  push:
+    branches: [main]
+    paths: ['app.apk', '.github/workflows/convert.yml']
+  workflow_dispatch:
+    inputs:
+      apk_url:
+        description: URL of the APK to convert (default app.apk in the repository, or the APK_URL variable)
+        required: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-java@d1374f8ac74474200d16ef8ecee22c7ae7a51880 # v6.3.0
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ~/.m2/repository
+            .cache
+          key: apk2web-${{ runner.os }}-${{ hashFiles('runtime/*.xml', 'tools/jarproc/pom.xml', 'runtime/framework/**') }}
+          restore-keys: apk2web-${{ runner.os }}-
+      - name: Get the APK
+        env:
+          APK_URL: ${{ inputs.apk_url || vars.APK_URL }}
+        run: |
+          if [ -n "$APK_URL" ]; then curl -fsSL --retry 3 -o app.apk "$APK_URL"; fi
+          if [ ! -f app.apk ]; then echo "::error::no APK: commit app.apk or set the APK_URL variable"; exit 1; fi
+      - name: Convert
+        # android.jar comes from the runner's preinstalled Android SDK ($ANDROID_HOME)
+        run: python3 apk2web.py app.apk _site --work _build
+      - name: Keep the link report
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: link-report
+          path: |
+            _build/link-report.txt
+            _build/teavm.log
+          if-no-files-found: ignore
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

@@ -1,0 +1,61 @@
+# Hardware and services a converted app runs without: their generated classes (runtime/framework-gen) behave as on an
+# Android device that lacks the feature, as AOSP's own code does there. tools/genapi.sh applies this to the bodies it
+# would otherwise leave as stubs: void methods do nothing; booleans are false; numbers 0; strings and other objects
+# null; lists, sets, maps and arrays empty. Lines "class.method = statements" give a method other statements (all
+# overloads; parameters by their SDK names).
+
+feature android/bluetooth/                  Bluetooth (BluetoothAdapter.getDefaultAdapter() is null)
+feature android/companion/                  companion devices (Bluetooth, Wi-Fi peers)
+feature android/nfc/                        NFC (NfcAdapter.getDefaultAdapter is null)
+feature android/se/omapi/                   secure elements
+feature android/hardware/usb/               USB host and accessory
+feature android/hardware/ConsumerIrManager  infrared emitter
+feature android/hardware/fingerprint/       fingerprint sensor
+feature android/hardware/biometrics/        biometric sensors
+feature android/hardware/camera2/           cameras (camera2: no camera ids)
+feature android/hardware/Camera             cameras (Camera: none)
+feature android/hardware/location/          geofencing hardware
+feature android/hardware/lights/            controllable lights
+feature android/telephony/                  telephony (no SIM, no radio)
+feature android/telecom/                    phone calls
+feature android/net/sip/                    SIP calls
+feature android/net/wifi/aware/             Wi-Fi Aware
+feature android/net/wifi/p2p/               Wi-Fi Direct
+feature android/net/wifi/rtt/               Wi-Fi round-trip time
+feature android/media/midi/                 MIDI devices
+feature android/media/tv/                   TV inputs and tuners
+feature android/uwb/                        ultra-wideband
+feature android/ranging/                    ranging
+feature android/hardware/SensorPrivacyManager sensor privacy toggles
+
+android/bluetooth/BluetoothAdapter.getDefaultAdapter = return null;
+android/bluetooth/BluetoothManager.getAdapter = return null;
+android/bluetooth/BluetoothAdapter.getState = return android.bluetooth.BluetoothAdapter.STATE_OFF;
+android/bluetooth/BluetoothAdapter.getScanMode = return android.bluetooth.BluetoothAdapter.SCAN_MODE_NONE;
+android/bluetooth/BluetoothAdapter.checkBluetoothAddress = if (address == null || address.length() != 17) return false; for (int i = 0; i < 17; i++) { char c = address.charAt(i); if (i % 3 == 2 ? c != ':' : !(c >= '0' && c <= '9' || c >= 'A' && c <= 'F')) return false; } return true;
+android/nfc/NfcAdapter.getDefaultAdapter = return null;
+android/nfc/NfcManager.getDefaultAdapter = return null;
+android/hardware/Camera.getNumberOfCameras = return 0;
+android/hardware/Camera.open = throw new java.lang.RuntimeException("Fail to connect to camera service");
+android/hardware/camera2/CameraManager.getCameraIdList = return new java.lang.String[0];
+android/hardware/camera2/CameraManager.getCameraCharacteristics = throw new java.lang.IllegalArgumentException("No camera " + cameraId);
+android/hardware/camera2/CameraManager.openCamera = throw new java.lang.IllegalArgumentException("No camera " + cameraId);
+android/hardware/biometrics/BiometricManager.canAuthenticate = return android.hardware.biometrics.BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE;
+android/hardware/fingerprint/FingerprintManager.isHardwareDetected = return false;
+android/telephony/SmsManager.getDefault = return new android.telephony.SmsManager((a2w.Hidden) null);
+android/telephony/SmsManager.getSmsManagerForSubscriptionId = return new android.telephony.SmsManager((a2w.Hidden) null);
+android/telephony/SmsManager.divideMessage = java.util.ArrayList<java.lang.String> parts = new java.util.ArrayList<>(); if (text == null) throw new java.lang.IllegalArgumentException("text is null"); for (int i = 0; i < text.length(); i += 160) parts.add(text.substring(i, java.lang.Math.min(text.length(), i + 160))); return parts;
+android/telephony/SmsManager.sendTextMessage = if (sentIntent != null) try { sentIntent.send(android.telephony.SmsManager.RESULT_ERROR_NO_SERVICE); } catch (android.app.PendingIntent.CanceledException e) { }
+android/telephony/PhoneNumberUtils.isGlobalPhoneNumber = return phoneNumber != null && phoneNumber.matches("[+]?[0-9.-]+");
+android/telephony/PhoneNumberUtils.stripSeparators = if (phoneNumber == null) return null; StringBuilder b = new StringBuilder(); for (char c : phoneNumber.toCharArray()) if (c >= '0' && c <= '9' || c == '+' || c == '*' || c == '#' || c == ',' || c == ';' || c == 'N') b.append(c); return b.toString();
+android/telephony/SubscriptionManager.getDefaultSubscriptionId = return android.telephony.SubscriptionManager.INVALID_SUBSCRIPTION_ID;
+android/telephony/SubscriptionManager.getDefaultDataSubscriptionId = return android.telephony.SubscriptionManager.INVALID_SUBSCRIPTION_ID;
+android/telephony/SubscriptionManager.getDefaultSmsSubscriptionId = return android.telephony.SubscriptionManager.INVALID_SUBSCRIPTION_ID;
+android/telephony/SubscriptionManager.getDefaultVoiceSubscriptionId = return android.telephony.SubscriptionManager.INVALID_SUBSCRIPTION_ID;
+android/telephony/SubscriptionManager.getActiveDataSubscriptionId = return android.telephony.SubscriptionManager.INVALID_SUBSCRIPTION_ID;
+android/telephony/SubscriptionManager.isValidSubscriptionId = return subscriptionId >= 0;
+android/telephony/SubscriptionManager.isUsableSubscriptionId = return subscriptionId >= 0;
+android/net/sip/SipManager.isApiSupported = return false;
+android/net/sip/SipManager.isVoipSupported = return false;
+android/net/sip/SipManager.newInstance = return null;
+android/media/midi/MidiManager.getDevices = return new android.media.midi.MidiDeviceInfo[0];

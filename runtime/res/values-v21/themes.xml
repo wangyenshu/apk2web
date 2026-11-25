@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- DeviceDefault from API 21: Material -->
+<resources>
+    <style name="Theme.DeviceDefault" parent="@android:style/Theme.Material" />
+    <style name="Theme.DeviceDefault.NoActionBar" parent="@android:style/Theme.Material.NoActionBar" />
+    <style name="Theme.DeviceDefault.NoActionBar.Fullscreen" parent="@android:style/Theme.Material.NoActionBar.Fullscreen" />
+    <style name="Theme.DeviceDefault.NoActionBar.Overscan" parent="@android:style/Theme.Material.NoActionBar.Overscan" />
+    <style name="Theme.DeviceDefault.NoActionBar.TranslucentDecor" parent="@android:style/Theme.Material.NoActionBar.TranslucentDecor" />
+    <style name="Theme.DeviceDefault.Light" parent="@android:style/Theme.Material.Light" />
+    <style name="Theme.DeviceDefault.Light.DarkActionBar" parent="@android:style/Theme.Material.Light.DarkActionBar" />
+    <style name="Theme.DeviceDefault.Light.NoActionBar" parent="@android:style/Theme.Material.Light.NoActionBar" />
+    <style name="Theme.DeviceDefault.Light.NoActionBar.Fullscreen" parent="@android:style/Theme.Material.Light.NoActionBar.Fullscreen" />
+    <style name="Theme.DeviceDefault.Light.NoActionBar.Overscan" parent="@android:style/Theme.Material.Light.NoActionBar.Overscan" />
+    <style name="Theme.DeviceDefault.Light.NoActionBar.TranslucentDecor" parent="@android:style/Theme.Material.Light.NoActionBar.TranslucentDecor" />
+    <style name="Theme.DeviceDefault.Dialog" parent="@android:style/Theme.Material.Dialog" />
+    <style name="Theme.DeviceDefault.Dialog.MinWidth" parent="@android:style/Theme.Material.Dialog.MinWidth" />
+    <style name="Theme.DeviceDefault.Dialog.NoActionBar" parent="@android:style/Theme.Material.Dialog.NoActionBar" />
+    <style name="Theme.DeviceDefault.Dialog.NoActionBar.MinWidth" parent="@android:style/Theme.Material.Dialog.NoActionBar.MinWidth" />
+    <style name="Theme.DeviceDefault.Dialog.Alert" parent="@android:style/Theme.Material.Dialog" />
+    <style name="Theme.DeviceDefault.Light.Dialog" parent="@android:style/Theme.Material.Light.Dialog" />
+    <style name="Theme.DeviceDefault.Light.Dialog.MinWidth" parent="@android:style/Theme.Material.Light.Dialog.MinWidth" />
+    <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar" parent="@android:style/Theme.Material.Light.Dialog.NoActionBar" />
+    <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar.MinWidth" parent="@android:style/Theme.Material.Light.Dialog.NoActionBar.MinWidth" />
+    <style name="Theme.DeviceDefault.Light.Dialog.Alert" parent="@android:style/Theme.Material.Light.Dialog" />
+    <style name="Theme.DeviceDefault.DialogWhenLarge" parent="@android:style/Theme.Material.DialogWhenLarge" />
+    <style name="Theme.DeviceDefault.DialogWhenLarge.NoActionBar" parent="@android:style/Theme.Material.DialogWhenLarge.NoActionBar" />
+    <style name="Theme.DeviceDefault.Light.DialogWhenLarge" parent="@android:style/Theme.Material.Light.DialogWhenLarge" />
+    <style name="Theme.DeviceDefault.Light.DialogWhenLarge.NoActionBar" parent="@android:style/Theme.Material.Light.DialogWhenLarge.NoActionBar" />
+    <style name="Theme.DeviceDefault.Panel" parent="@android:style/Theme.Material.Panel" />
+    <style name="Theme.DeviceDefault.Light.Panel" parent="@android:style/Theme.Material.Light.Panel" />
+    <style name="Theme.DeviceDefault.Wallpaper" parent="@android:style/Theme.Material.Wallpaper" />
+    <style name="Theme.DeviceDefault.Wallpaper.NoTitleBar" parent="@android:style/Theme.Material.Wallpaper.NoTitleBar" />
+    <style name="Theme.DeviceDefault.Settings" parent="@android:style/Theme.Material.Light.DarkActionBar" />
+    <style name="Theme.DeviceDefault.DayNight" parent="@android:style/Theme.Material.Light" />
+</resources>

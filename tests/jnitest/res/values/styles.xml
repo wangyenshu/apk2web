@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <attr name="accentish" format="color" />
+  <attr name="cardStyle" format="reference" />
+  <declare-styleable name="Card">
+    <attr name="android:padding" />
+    <attr name="accentish" />
+  </declare-styleable>
+  <style name="TestTheme" parent="@android:style/Theme.Holo.Light">
+    <item name="accentish">#ff123456</item>
+    <item name="cardStyle">@style/Card</item>
+    <item name="android:textColorLink">?attr/accentish</item>
+  </style>
+  <style name="Card">
+    <item name="android:padding">7dp</item>
+  </style>
+</resources>

@@ -1,0 +1,151 @@
+# org.json
+
+`+` implemented, `*` derived from the declaration (a data class or builder: stores and returns values), `~` empty or constant body, `-` missing (a stub that logs and returns a default). "declaration": the class is declared from the SDK (runtime/framework-gen). Constants are not listed. See [API.md](../API.md).
+
+## JSONArray — bundled library; API 1+ (45 +, 0 *, 0 ~, 0 -)
+
+```
++ JSONArray()  [API 1+]
++ JSONArray(Collection)  [API 1+]
++ JSONArray(JSONTokener)  [API 1+]
++ JSONArray(Object)  [API 19+]
++ JSONArray(String)  [API 1+]
++ equals(Object): boolean  [API 1+]
++ get(int): Object  [API 1+]
++ getBoolean(int): boolean  [API 1+]
++ getDouble(int): double  [API 1+]
++ getInt(int): int  [API 1+]
++ getJSONArray(int): JSONArray  [API 1+]
++ getJSONObject(int): JSONObject  [API 1+]
++ getLong(int): long  [API 1+]
++ getString(int): String  [API 1+]
++ hashCode(): int  [API 1+]
++ isNull(int): boolean  [API 1+]
++ join(String): String  [API 1+]
++ length(): int  [API 1+]
++ opt(int): Object  [API 1+]
++ optBoolean(int): boolean  [API 1+]
++ optBoolean(int, boolean): boolean  [API 1+]
++ optDouble(int): double  [API 1+]
++ optDouble(int, double): double  [API 1+]
++ optInt(int): int  [API 1+]
++ optInt(int, int): int  [API 1+]
++ optJSONArray(int): JSONArray  [API 1+]
++ optJSONObject(int): JSONObject  [API 1+]
++ optLong(int): long  [API 1+]
++ optLong(int, long): long  [API 1+]
++ optString(int): String  [API 1+]
++ optString(int, String): String  [API 1+]
++ put(Object): JSONArray  [API 1+]
++ put(boolean): JSONArray  [API 1+]
++ put(double): JSONArray  [API 1+]
++ put(int): JSONArray  [API 1+]
++ put(int, Object): JSONArray  [API 1+]
++ put(int, boolean): JSONArray  [API 1+]
++ put(int, double): JSONArray  [API 1+]
++ put(int, int): JSONArray  [API 1+]
++ put(int, long): JSONArray  [API 1+]
++ put(long): JSONArray  [API 1+]
++ remove(int): Object  [API 19+]
++ toJSONObject(JSONArray): JSONObject  [API 1+]
++ toString(): String  [API 1+]
++ toString(int): String  [API 1+]
+```
+
+## JSONException — bundled library; API 1+ (1 +, 0 *, 0 ~, 2 -)
+
+```
++ JSONException(String)  [API 1+]
+- JSONException(String, Throwable)  [API 27+]
+- JSONException(Throwable)  [API 27+]
+```
+
+## JSONObject — bundled library; API 1+ (45 +, 0 *, 0 ~, 1 -)
+
+```
++ JSONObject()  [API 1+]
++ JSONObject(JSONObject, String[])  [API 1+]
++ JSONObject(JSONTokener)  [API 1+]
++ JSONObject(Map)  [API 1+]
++ JSONObject(String)  [API 1+]
++ NULL [field]  [API 1+]
++ accumulate(String, Object): JSONObject  [API 1+]
+- append(String, Object): JSONObject  [API 33+]
++ get(String): Object  [API 1+]
++ getBoolean(String): boolean  [API 1+]
++ getDouble(String): double  [API 1+]
++ getInt(String): int  [API 1+]
++ getJSONArray(String): JSONArray  [API 1+]
++ getJSONObject(String): JSONObject  [API 1+]
++ getLong(String): long  [API 1+]
++ getString(String): String  [API 1+]
++ has(String): boolean  [API 1+]
++ isNull(String): boolean  [API 1+]
++ keys(): Iterator  [API 1+]
++ length(): int  [API 1+]
++ names(): JSONArray  [API 1+]
++ numberToString(Number): String [static]  [API 1+]
++ opt(String): Object  [API 1+]
++ optBoolean(String): boolean  [API 1+]
++ optBoolean(String, boolean): boolean  [API 1+]
++ optDouble(String): double  [API 1+]
++ optDouble(String, double): double  [API 1+]
++ optInt(String): int  [API 1+]
++ optInt(String, int): int  [API 1+]
++ optJSONArray(String): JSONArray  [API 1+]
++ optJSONObject(String): JSONObject  [API 1+]
++ optLong(String): long  [API 1+]
++ optLong(String, long): long  [API 1+]
++ optString(String): String  [API 1+]
++ optString(String, String): String  [API 1+]
++ put(String, Object): JSONObject  [API 1+]
++ put(String, boolean): JSONObject  [API 1+]
++ put(String, double): JSONObject  [API 1+]
++ put(String, int): JSONObject  [API 1+]
++ put(String, long): JSONObject  [API 1+]
++ putOpt(String, Object): JSONObject  [API 1+]
++ quote(String): String [static]  [API 1+]
++ remove(String): Object  [API 1+]
++ toJSONArray(JSONArray): JSONArray  [API 1+]
++ toString(): String  [API 1+]
++ toString(int): String  [API 1+]
++ wrap(Object): Object [static]  [API 19+]
+```
+
+## JSONStringer — bundled library; API 1+ (11 +, 0 *, 0 ~, 0 -)
+
+```
++ JSONStringer()  [API 1+]
++ array(): JSONStringer  [API 1+]
++ endArray(): JSONStringer  [API 1+]
++ endObject(): JSONStringer  [API 1+]
++ key(String): JSONStringer  [API 1+]
++ object(): JSONStringer  [API 1+]
++ toString(): String  [API 1+]
++ value(Object): JSONStringer  [API 1+]
++ value(boolean): JSONStringer  [API 1+]
++ value(double): JSONStringer  [API 1+]
++ value(long): JSONStringer  [API 1+]
+```
+
+## JSONTokener — bundled library; API 1+ (16 +, 0 *, 0 ~, 0 -)
+
+```
++ JSONTokener(String)  [API 1+]
++ back(): void  [API 1+]
++ dehexchar(char): int [static]  [API 1+]
++ more(): boolean  [API 1+]
++ next(): char  [API 1+]
++ next(char): char  [API 1+]
++ next(int): String  [API 1+]
++ nextClean(): char  [API 1+]
++ nextString(char): String  [API 1+]
++ nextTo(String): String  [API 1+]
++ nextTo(char): String  [API 1+]
++ nextValue(): Object  [API 1+]
++ skipPast(String): void  [API 1+]
++ skipTo(char): char  [API 1+]
++ syntaxError(String): JSONException  [API 1+]
++ toString(): String  [API 1+]
+```
+

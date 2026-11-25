@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">apk2web JNI test</string>
+  <string name="run">Run again</string>
+  <plurals name="passed"><item quantity="one">%d check passed</item><item quantity="other">%d checks passed</item></plurals>
+</resources>

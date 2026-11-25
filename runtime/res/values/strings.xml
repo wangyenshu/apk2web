@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- English values of the public framework strings (android.R.string) -->
+<resources>
+    <string name="cancel">Cancel</string>
+    <string name="copy">Copy</string>
+    <string name="copyUrl">Copy URL</string>
+    <string name="cut">Cut</string>
+    <string name="defaultVoiceMailAlphaTag">Voicemail</string>
+    <string name="defaultMsisdnAlphaTag">MSISDN1</string>
+    <string name="emptyPhoneNumber">(No phone number)</string>
+    <string name="httpErrorBadUrl">Couldn\'t open the page because the URL is invalid.</string>
+    <string name="httpErrorUnsupportedScheme">The protocol isn\'t supported.</string>
+    <string name="no">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="paste">Paste</string>
+    <string name="search_go">Search</string>
+    <string name="selectAll">Select all</string>
+    <string name="unknownName">Unknown</string>
+    <string name="untitled">&lt;Untitled&gt;</string>
+    <string name="VideoView_error_button">OK</string>
+    <string name="VideoView_error_text_unknown">Can\'t play this video.</string>
+    <string name="VideoView_error_title">Video problem</string>
+    <string name="yes">OK</string>
+    <string name="dialog_alert_title">Attention</string>
+    <string name="VideoView_error_text_invalid_progressive_playback">This video isn\'t valid for streaming to this device.</string>
+    <string name="selectTextMode">Select text</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="fingerprint_icon_content_description">Fingerprint icon</string>
+    <string name="paste_as_plain_text">Paste as plain text</string>
+    <string name="autofill">Autofill</string>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- platform colors (frameworks/base/core/res/res/values/colors*.xml) -->
+<resources>
+    <color name="darker_gray">#ffaaaaaa</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="background_dark">#ff000000</color>
+    <color name="background_light">#ffffffff</color>
+    <color name="widget_edittext_dark">#ff000000</color>
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <color name="holo_blue_dark">#ff0099cc</color>
+    <color name="holo_green_light">#ff99cc00</color>
+    <color name="holo_green_dark">#ff669900</color>
+    <color name="holo_red_light">#ffff4444</color>
+    <color name="holo_red_dark">#ffcc0000</color>
+    <color name="holo_orange_light">#ffffbb33</color>
+    <color name="holo_orange_dark">#ffff8800</color>
+    <color name="holo_purple">#ffaa66cc</color>
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <color name="hint_foreground_dark">#ff808080</color>
+    <color name="hint_foreground_light">#ff808080</color>
+    <color name="hint_foreground_holo_dark">#ff808080</color>
+    <color name="hint_foreground_holo_light">#ff808080</color>
+    <color name="hint_foreground_material_dark">#80ffffff</color>
+    <color name="hint_foreground_material_light">#61000000</color>
+    <color name="background_holo_dark">#ff000000</color>
+    <color name="background_holo_light">#fff3f3f3</color>
+    <color name="background_material_dark">#ff303030</color>
+    <color name="background_material_light">#fffafafa</color>
+    <color name="bright_foreground_dark">#ffffffff</color>
+    <color name="bright_foreground_light">#ff000000</color>
+    <color name="accent_material_dark">#ff80cbc4</color>
+    <color name="accent_material_light">#ff009688</color>
+    <color name="primary_material_dark">#ff212121</color>
+    <color name="primary_material_light">#fff5f5f5</color>
+    <color name="primary_dark_material_dark">#ff000000</color>
+    <color name="primary_dark_material_light">#ff757575</color>
+    <color name="ripple_material_dark">#33ffffff</color>
+    <color name="ripple_material_light">#1f000000</color>
+    <color name="button_material_dark">#ff5a595b</color>
+    <color name="button_material_light">#ffd6d7d7</color>
+    <color name="primary_text_dark_nodisable">#ffffffff</color>
+    <color name="primary_text_light_nodisable">#ff000000</color>
+    <color name="secondary_text_dark_nodisable">#ffbebebe</color>
+    <color name="secondary_text_light_nodisable">#ff323232</color>
+</resources>

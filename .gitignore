@@ -1,0 +1,9 @@
+.cache/
+*.build/
+_site/
+_build/
+tools/jarproc/target/
+tests/jnitest/build/
+tests/jnitest/jnitest.apk
+__pycache__/
+tests/armv7/build/

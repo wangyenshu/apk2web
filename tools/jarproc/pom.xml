@@ -1,0 +1,12 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"><modelVersion>4.0.0</modelVersion>
+<groupId>web</groupId><artifactId>jarproc</artifactId><version>1</version>
+<properties><maven.compiler.source>17</maven.compiler.source><maven.compiler.target>17</maven.compiler.target></properties>
+<dependencies>
+ <dependency><groupId>org.ow2.asm</groupId><artifactId>asm</artifactId><version>9.7.1</version></dependency>
+ <dependency><groupId>org.ow2.asm</groupId><artifactId>asm-commons</artifactId><version>9.7.1</version></dependency>
+ <dependency><groupId>org.ow2.asm</groupId><artifactId>asm-tree</artifactId><version>9.7.1</version></dependency>
+ <dependency><groupId>org.ow2.asm</groupId><artifactId>asm-analysis</artifactId><version>9.7.1</version></dependency>
+ <!-- only for jp.teavm.*: compiler plugins the linker hands to TeaVM inside all.jar -->
+ <dependency><groupId>org.teavm</groupId><artifactId>teavm-core</artifactId><version>0.16.0</version><scope>provided</scope></dependency>
+</dependencies>
+</project>

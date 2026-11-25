@@ -1,0 +1,47 @@
+# Builds the conformance test app (tests/jnitest: Java + ARMv5 native code) and converts it; checks the sources.
+name: Test
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-java@d1374f8ac74474200d16ef8ecee22c7ae7a51880 # v6.3.0
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ~/.m2/repository
+            .cache
+          key: apk2web-${{ runner.os }}-${{ hashFiles('runtime/*.xml', 'tools/jarproc/pom.xml', 'runtime/framework/**') }}
+          restore-keys: apk2web-${{ runner.os }}-
+      - name: Check sources
+        run: |
+          python3 -m py_compile apk2web.py tools/*.py
+          for f in runtime/site/*.js native/*.js; do node --check "$f" 2>/dev/null || node --input-type=module --check < "$f"; done
+          bash -n native/build.sh tests/jnitest/build.sh
+      - name: Build the test app
+        run: |
+          sudo apt-get install -y --no-install-recommends lld >/dev/null
+          AJ=$(find "$ANDROID_HOME/platforms" -maxdepth 2 -name android.jar | sort -V | tail -1)
+          BT=$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -1)
+          LEGACY=$(find "$ANDROID_HOME/platforms" -path '*/optional/org.apache.http.legacy.jar' | sort -V | tail -1)
+          bash tests/jnitest/build.sh "$AJ" "$BT" "$LEGACY"
+      - name: Convert it
+        run: python3 apk2web.py tests/jnitest/jnitest.apk _site --work _build
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: jnitest-site
+          path: _site
